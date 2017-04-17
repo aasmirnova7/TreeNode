@@ -21,7 +21,7 @@ public class TreeNodeImpl implements TreeNode{
     }//
 
     @Override
-    public TreeNode getRoot() { //ok!
+    public TreeNode getRoot() { 
         TreeNode root = null;
         TreeNode node = this;
        while (node.getParent() != null){
@@ -32,7 +32,7 @@ public class TreeNodeImpl implements TreeNode{
     }
 
     @Override
-    public boolean isLeaf() { //ok!
+    public boolean isLeaf() { 
         if(this.getChildCount() == 0){
             return true;
         }
@@ -40,7 +40,7 @@ public class TreeNodeImpl implements TreeNode{
     }
 
     @Override
-    public int getChildCount() { //ok
+    public int getChildCount() { 
         return this.leafs.size();
     }
 
@@ -50,7 +50,7 @@ public class TreeNodeImpl implements TreeNode{
     }
 
     @Override
-    public void addChild(TreeNode child) { //ok
+    public void addChild(TreeNode child) { 
         leafs.add(child);
         child.setParent(this);
     }
@@ -84,12 +84,12 @@ public class TreeNodeImpl implements TreeNode{
     }
 
     @Override
-    public Object getData() {//ok
+    public Object getData() {
         return this.data;
     }
 
     @Override
-    public void setData(Object data) {//ok
+    public void setData(Object data) {
         this.data = data;
     }
 
@@ -153,7 +153,7 @@ public class TreeNodeImpl implements TreeNode{
     }
 
     @Override
-    public TreeNode findChild(Object data){ //ok!!!!!!!!!
+    public TreeNode findChild(Object data){ 
         TreeNode res = null;
         if(data == null){
             for(TreeNode node : this.leafs){
@@ -218,11 +218,7 @@ public class TreeNodeImpl implements TreeNode{
 
         System.out.println("1 = " + tr1);
         System.out.println("7 = "+ tr7);
-        //System.out.println("8 = "+ tr8);
         System.out.println("_______________");
-        //System.out.println(tr2.getData());
-        //System.out.println(tr6);
-        //System.out.println(tr8.getRoot());
         System.out.println(tr6.findParent("1"));
 
 }
